@@ -41,7 +41,7 @@ if [ $# -eq 0 ]; then
     -a android.intent.action.VIEW \
     -c android.intent.category.BROWSABLE \
     -c android.intent.category.DEFAULT \
-    -d "http://127.0.0.1:${port}" \
+    -d "http://127.0.0.1:$(get_port)" \
     -f 0x10000000 >/dev/null 2>&1
     exit 0
 fi
