@@ -1,4 +1,4 @@
-# ddns-go-Magisk 模块
+# ddns-go 模块
 
 把 [ddns-go](https://github.com/jeessy2/ddns-go) 跑在 Android 手机上的 Magisk / KernelSU / APatch / FolkPatch 模块，带 Web 控制面板、看门狗保活、日志管理。项目开源在 GitHub：[lanyixuanli/ddns-go-magisk](https://github.com/lanyixuanli/ddns-go-magisk)，欢迎 Star。
 
