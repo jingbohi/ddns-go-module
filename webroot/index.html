@@ -494,7 +494,12 @@ async function toggleListenMode(){
 }
 
 async function openDdnsPanel(){
-  await exec(`am start --user 0 -a android.intent.action.VIEW -d http://127.0.0.1:${currentPort} >/dev/null 2>&1`);
+  await exec(`am start --user 0 \
+  -a android.intent.action.VIEW \
+  -c android.intent.category.BROWSABLE \
+  -c android.intent.category.DEFAULT \
+  -d "http://127.0.0.1:${currentPort}" \
+  -f 0x10000000 >/dev/null 2>&1`);
 }
 
 async function savePort(){
