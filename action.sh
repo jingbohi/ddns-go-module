@@ -35,8 +35,14 @@ get_port() {
 }
 
 # ---------- 无参数：卡片按钮，打开原生面板 ----------
+# 修复安卓10无法传递到默认浏览器打开面板情况
 if [ $# -eq 0 ]; then
-    am start --user 0 -a android.intent.action.VIEW -d "http://127.0.0.1:$(get_port)" >/dev/null 2>&1
+    am start --user 0 \
+    -a android.intent.action.VIEW \
+    -c android.intent.category.BROWSABLE \
+    -c android.intent.category.DEFAULT \
+    -d "http://127.0.0.1:${port}" \
+    -f 0x10000000 >/dev/null 2>&1
     exit 0
 fi
 
