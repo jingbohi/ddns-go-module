@@ -202,7 +202,7 @@ const LISTEN_MODE_FILE="/data/adb/ddns_go_module/listen_mode";
 const AUTOSTART_FILE="/data/adb/ddns_go_module/autostart";
 const PORT_FILE="/data/adb/ddns_go_module/listen_port";
 const WORK_DIR="/data/adb/ddns_go_module";
-const DDNS_BIN="test -x /system/bin/ddns-go && echo /system/bin/ddns-go || echo /data/adb/modules/ddns-go-Module/system/bin/ddns-go";
+const DDNS_BIN="test -x /system/bin/ddns-go && echo /system/bin/ddns-go || echo /data/adb/modules/ddns-go-module/system/bin/ddns-go";
 
 let procRunning = false;
 let currentPort = 9876;  // 当前监听端口，刷新时从文件读
